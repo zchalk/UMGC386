@@ -1,0 +1,173 @@
+$purple: rgb(186, 148, 233);
+$pink: rgb(238, 174, 202);
+$tablet: 768px;
+$phone: 480px;
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+  }
+  
+  html, body {
+    height: 100%;
+  }
+  
+  header {
+    background: rgb(238, 174, 202);
+    background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100px;
+    margin-bottom: 30px;
+  }
+  
+  .title-heading {
+    font-family: 'BioRhyme Expanded', serif;
+    font-weight: bolder;
+    color: white;
+  }
+  
+  .nav-list {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  .nav-item {
+    list-style: none;
+  }
+  
+  .nav-a {
+    margin-left: 40px;
+    text-decoration: none;
+    color: white;
+    font-family: 'BioRhyme Expanded', serif;
+  }
+  
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    height: 100%;
+  }
+  
+  h2 {
+    font-family: 'BioRhyme Expanded', serif;
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    font-family: 'Stint Ultra Expanded', serif;
+    font-size: 24px;
+  }
+  
+  li {
+    font-family: 'BioRhyme Expanded', serif;
+    font-size: 22px;
+    list-style-position: inside;
+  
+    &::marker {
+      color: $purple;
+    }
+  }
+  
+  .list-p {
+    font-size: 20px;
+  }
+  
+  .response-container {
+    flex-basis: auto;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .breadcrumb {
+    text-decoration: underline wavy $purple;
+    color: black;
+  }
+  
+  .button-container {
+    flex-basis: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  button {
+    cursor: pointer;
+    box-shadow: 13px 10px 16px 0px $purple;
+    border-radius: 10%;
+    border-color: $pink;
+    padding: 10px;
+    color: white;
+    font-family: 'BioRhyme Expanded', serif;
+    background: $pink;
+    background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+  }
+  
+
+  @media (max-width: $tablet) {
+    header {
+        height: 80px;
+        margin-bottom:20px;
+    }
+    .nav-a {
+        margin-left: 30px;
+        font-size: 18px;
+    }
+    .title-heading {
+        font-size: 22px;
+    }
+    h2 {
+        font-size: 20px;
+        margin-bottom: 8px;
+    }
+    p {
+        font-size: 18px;
+    }
+    li {
+        font-size: 16px;
+    }
+    .list-p {
+        font-size: 14px;
+    }
+    button {
+        padding: 6px;
+    }
+  }
+
+  @media (max-width: $phone) {
+    header {
+        height: 60px;
+        margin-bottom:10px;
+    }
+    .nav-a {
+        margin-left: 30px;
+        font-size: 10px;
+    }
+    .title-heading {
+        font-size: 16px;
+    }
+    h2 {
+        font-size: 14px;
+        margin-bottom: 6px;
+    }
+    p {
+        font-size: 12px;
+    }
+    li {
+        font-size: 10px;
+    }
+    .list-p {
+        font-size: 8px;
+    }
+    button {
+        font-size: 10px;
+        padding: 6px;
+    }
+  }

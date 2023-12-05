@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+html, body {
+  height: 100%;
+}
+
+header {
+  background: rgb(238, 174, 202);
+  background: radial-gradient(circle, rgb(238, 174, 202) 0%, rgb(148, 187, 233) 100%);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100px;
+  margin-bottom: 30px;
+}
+
+.title-heading {
+  font-family: "BioRhyme Expanded", serif;
+  font-weight: bolder;
+  color: white;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.nav-item {
+  list-style: none;
+}
+
+.nav-a {
+  margin-left: 40px;
+  text-decoration: none;
+  color: white;
+  font-family: "BioRhyme Expanded", serif;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  height: 100%;
+}
+
+h2 {
+  font-family: "BioRhyme Expanded", serif;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-family: "Stint Ultra Expanded", serif;
+  font-size: 24px;
+}
+
+li {
+  font-family: "BioRhyme Expanded", serif;
+  font-size: 22px;
+  list-style-position: inside;
+}
+li::marker {
+  color: rgb(186, 148, 233);
+}
+
+.list-p {
+  font-size: 20px;
+}
+
+.response-container {
+  flex-basis: auto;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.breadcrumb {
+  text-decoration: underline wavy rgb(186, 148, 233);
+  color: black;
+}
+
+.button-container {
+  flex-basis: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  cursor: pointer;
+  box-shadow: 13px 10px 16px 0px rgb(186, 148, 233);
+  border-radius: 10%;
+  border-color: rgb(238, 174, 202);
+  padding: 10px;
+  color: white;
+  font-family: "BioRhyme Expanded", serif;
+  background: rgb(238, 174, 202);
+  background: radial-gradient(circle, rgb(238, 174, 202) 0%, rgb(148, 187, 233) 100%);
+}
+
+@media (max-width: 768px) {
+  header {
+    height: 80px;
+    margin-bottom: 20px;
+  }
+  .nav-a {
+    margin-left: 30px;
+    font-size: 18px;
+  }
+  .title-heading {
+    font-size: 22px;
+  }
+  h2 {
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+  p {
+    font-size: 18px;
+  }
+  li {
+    font-size: 16px;
+  }
+  .list-p {
+    font-size: 14px;
+  }
+  button {
+    padding: 6px;
+  }
+}
+@media (max-width: 480px) {
+  header {
+    height: 60px;
+    margin-bottom: 10px;
+  }
+  .nav-a {
+    margin-left: 30px;
+    font-size: 10px;
+  }
+  .title-heading {
+    font-size: 16px;
+  }
+  h2 {
+    font-size: 14px;
+    margin-bottom: 6px;
+  }
+  p {
+    font-size: 12px;
+  }
+  li {
+    font-size: 10px;
+  }
+  .list-p {
+    font-size: 8px;
+  }
+  button {
+    font-size: 10px;
+    padding: 6px;
+  }
+}
+
+/*# sourceMappingURL=output.css.map */
