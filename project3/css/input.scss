@@ -1,5 +1,17 @@
 $purple: rgb(186, 148, 233);
 $pink: rgb(238, 174, 202);
+$gradient: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+$transition-time:opacity 200ms ease-in-out, width 200ms ease-in-out, rotation 200ms ease-in-out, translate 200ms ease-in-out;
+$ipad-height: 8px;
+$ipad-length: 60px;
+$ipad-gap: 6px;
+$hamburger-height: calc($ipad-height * 3 + $ipad-gap * 2 );
+$x-width: calc($hamburger-height * 1.41421356237);
+$iphone-height: 4px;
+$iphone-length: 30px;
+$iphone-gap: 3px;
+$iphone-hamburger-height: calc($iphone-height * 3 + $iphone-gap * 2 );
+$iphone-x-width: calc($iphone-hamburger-height * 1.41421356237);
 $tablet: 768px;
 $phone: 480px;
 
@@ -8,14 +20,31 @@ $phone: 480px;
     padding: 0;
     text-decoration: none;
   }
+
+  * {
+	box-sizing: border-box;
+	&::after {
+		box-sizing: border-box;
+	}
+	&::before {
+		box-sizing: border-box;
+	}
+}
   
   html, body {
     height: 100%;
+    margin: 0;
+  }
+  .hamburger-container {
+    display: none;
+  }
+  .sidebar {
+    display: none;
   }
   
   header {
     background: rgb(238, 174, 202);
-    background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+    background: $gradient;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -107,18 +136,92 @@ $phone: 480px;
     color: white;
     font-family: 'BioRhyme Expanded', serif;
     background: $pink;
-    background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+    background: $gradient;
   }
   
 
   @media (max-width: $tablet) {
+    nav {
+        display: flex;
+        justify-content: center;
+      }
+      .hamburger-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+      }
+      .sidebar {
+        transition: $transition-time;
+        translate: 500%;
+        margin-top: calc($ipad-height + 5px);
+        background: $gradient;
+        padding: 5px;
+      }
+      .hamburger-label {
+        &::before {
+            content: "";
+            width: $ipad-length;
+            height: $ipad-height;
+            background-color: $purple;
+            border-radius: 50px;
+            transition: $transition-time;
+            transform-origin: left center;
+        }
+        &::after {
+            content: "";
+            width: $ipad-length;
+            height: $ipad-height;
+            background-color: $purple;
+            border-radius: 50px;
+            transition: $transition-time;
+            transform-origin: left center;
+        }
+        input {
+            appearance: none;
+            content: "";
+            width: $ipad-length;
+            height: $ipad-height;
+            background-color: $purple;
+            border-radius: 50px;
+            outline: none;
+            pointer-events: none;
+            transition: $transition-time;
+            transform-origin: left center;
+        }
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap:$ipad-gap;
+        width:max-content;
+        align-self: flex-end;
+        cursor: pointer;
+        margin-bottom: 10px;
+    }
+    .hamburger-label input:checked {
+        opacity: 0;
+        width: 0;
+    }
+    .hamburger-label:has(input:checked)::before{
+        rotate:45deg;
+        width: $x-width;
+        translate: 0 calc($ipad-height / -2);
+    }
+    .hamburger-label:has(input:checked)::after{
+        rotate:-45deg;
+        width: $x-width;
+        translate: 0 calc($ipad-height / 2);
+    }
+    .hamburger-label:has(input:checked) + .sidebar {
+        translate: 0;
+      }
+    .nav-list {
+        display: none;
+    }
     header {
         height: 80px;
         margin-bottom:20px;
-    }
-    .nav-a {
-        margin-left: 30px;
-        font-size: 18px;
     }
     .title-heading {
         font-size: 22px;
@@ -142,14 +245,89 @@ $phone: 480px;
   }
 
   @media (max-width: $phone) {
+    nav {
+        display: flex;
+        justify-content: center;
+      }
+      .hamburger-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+      }
+      .sidebar {
+        transition: $transition-time;
+        translate: 500%;
+        margin-top: calc($iphone-height + 5px);
+        background: $gradient;
+        padding: 5px;
+      }
+      .hamburger-label {
+        &::before {
+            content: "";
+            width: $iphone-length;
+            height: $iphone-height;
+            background-color: $purple;
+            border-radius: 50px;
+            transition: $transition-time;
+            transform-origin: left center;
+        }
+        &::after {
+            content: "";
+            width: $iphone-length;
+            height: $iphone-height;
+            background-color: $purple;
+            border-radius: 50px;
+            transition: $transition-time;
+            transform-origin: left center;
+        }
+        input {
+            appearance: none;
+            content: "";
+            width: $iphone-length;
+            height: $iphone-height;
+            background-color: $purple;
+            border-radius: 50px;
+            outline: none;
+            pointer-events: none;
+            transition: $transition-time;
+            transform-origin: left center;
+        }
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap:$iphone-gap;
+        width:max-content;
+        align-self: flex-end;
+        cursor: pointer;
+        margin-bottom: 10px;
+    }
+    .hamburger-label input:checked {
+        opacity: 0;
+        width: 0;
+    }
+    .hamburger-label:has(input:checked)::before{
+        rotate:45deg;
+        width: $iphone-x-width;
+        translate: 0 calc($iphone-height / -2);
+    }
+    .hamburger-label:has(input:checked)::after{
+        rotate:-45deg;
+        width: $iphone-x-width;
+        translate: 0 calc($iphone-height / 2);
+    }
+    .hamburger-label:has(input:checked) + .sidebar {
+        translate: 0;
+      }
+    .nav-list {
+        display: none;
+    }
     header {
         height: 60px;
         margin-bottom:10px;
     }
-    .nav-a {
-        margin-left: 30px;
-        font-size: 10px;
-    }
+    
     .title-heading {
         font-size: 16px;
     }
