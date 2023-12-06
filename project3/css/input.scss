@@ -12,8 +12,9 @@ $iphone-length: 30px;
 $iphone-gap: 3px;
 $iphone-hamburger-height: calc($iphone-height * 3 + $iphone-gap * 2 );
 $iphone-x-width: calc($iphone-hamburger-height * 1.41421356237);
-$tablet: 768px;
+$tablet: 820px;
 $phone: 480px;
+$small-phone: 399px;
 
 * {
     margin: 0;
@@ -33,11 +34,10 @@ $phone: 480px;
   
   html, body {
     height: 100%;
+    width: 100%;
     margin: 0;
   }
-  .hamburger-container {
-    display: none;
-  }
+  
   .sidebar {
     display: none;
   }
@@ -145,16 +145,16 @@ $phone: 480px;
         display: flex;
         justify-content: center;
       }
-      .hamburger-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
+      .hamburger {
+        list-style: none;
+      }
+      .hamburger-a {
+        text-decoration: none;
+        color: white;
       }
       .sidebar {
         transition: $transition-time;
-        translate: 500%;
+        // transform:translate(200%, 100%);
         margin-top: calc($ipad-height + 5px);
         background: $gradient;
         padding: 5px;
@@ -190,6 +190,10 @@ $phone: 480px;
             transition: $transition-time;
             transform-origin: left center;
         }
+        display: block;
+        position: absolute;
+        top:20px;
+        right:50px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -214,7 +218,8 @@ $phone: 480px;
         translate: 0 calc($ipad-height / 2);
     }
     .hamburger-label:has(input:checked) + .sidebar {
-        translate: 0;
+      display: block;
+      transform: translate(25%, 100%);
       }
     .nav-list {
         display: none;
@@ -224,7 +229,7 @@ $phone: 480px;
         margin-bottom:20px;
     }
     .title-heading {
-        font-size: 22px;
+        font-size: 26px;
     }
     h2 {
         font-size: 20px;
@@ -249,16 +254,9 @@ $phone: 480px;
         display: flex;
         justify-content: center;
       }
-      .hamburger-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-      }
       .sidebar {
         transition: $transition-time;
-        translate: 500%;
+        /* transform:translate(200%, 100%); */
         margin-top: calc($iphone-height + 5px);
         background: $gradient;
         padding: 5px;
@@ -318,7 +316,8 @@ $phone: 480px;
         translate: 0 calc($iphone-height / 2);
     }
     .hamburger-label:has(input:checked) + .sidebar {
-        translate: 0;
+      display: block;
+      transform: translate(0%, 85%);
       }
     .nav-list {
         display: none;
@@ -329,7 +328,44 @@ $phone: 480px;
     }
     
     .title-heading {
-        font-size: 16px;
+        font-size: 26px;
+    }
+    h2 {
+        font-size: 14px;
+        margin-bottom: 6px;
+    }
+    p {
+        font-size: 12px;
+    }
+    li {
+        font-size: 10px;
+    }
+    .list-p {
+        font-size: 8px;
+    }
+    button {
+        font-size: 10px;
+        padding: 6px;
+    }
+  }
+  @media (max-width: $small-phone) {
+    nav {
+        display: flex;
+        justify-content: center;
+      }
+    .hamburger-label:has(input:checked) + .sidebar {
+      display: block;
+      transform: translate(0%, 85%);
+      }
+    .nav-list {
+        display: none;
+    }
+    header {
+        height: 60px;
+        margin-bottom:10px;
+    }
+    .title-heading {
+        font-size: 22px;
     }
     h2 {
         font-size: 14px;
