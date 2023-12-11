@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="UMGC, web, design, education, sass">
+    <meta name="author" content="Zoe Chalk">
+    <meta name="description" content="This is a routing page for Zoe Chalk's Projects in UMGC 386">
+    <link rel="stylesheet" href="css/output.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=BioRhyme+Expanded:wght@300;400;800&family=Stint+Ultra+Expanded&display=swap" rel="stylesheet">
+    <title>PreProcessing</title>
+</head>
+<body>
+    <header>
+        <h1 class="title-heading">Preprocessing - Zoe Chalk</h1>
+        <nav>
+            <ul class="nav-list">
+                <li class="nav-item"><a class="nav-a" href="../index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-a" href="project3.html">Project 3</a></li>
+            </ul>
+                <label class="hamburger-label">
+                    <input type="checkbox">
+                </label>
+            <aside class="sidebar">
+                <ul class="hamburger">
+                    <li class="hamburger-item"><a class="hamburger-a" href="../index.html">Home</a></li>
+                    <li class="hamburger-item"><a class="hamburger-a" href="project3.html">Project 3</a></li>
+                </ul>
+            </aside>
+        </nav>
+    </header>
+    <main>
+        <div class="response-container">
+            <h2>Implementation</h2>
+            <p>SASS implementation takes place in either the client or server side.</p>
+            <ul>
+                <li>Client Side</li>
+                <p class="list-p">Client side implementation typically takes works through Browser Execution. Sass is compiles in the browser using JS libraries. This allows for dynamic compilation, or changes to compile in the browser in real time.</p>
+
+                <li>Server Side</li>
+                <p class="list-p">On the server side, SASS files are precompiled into CSS before deployment. This approach allows for better optimization and stability, by dynamic changes are not possible.</p>
+            </ul>
+
+        </div>
+
+        <div class="response-container">
+            <h2>SASS</h2>
+            <p>SASS operates by extending CSS through the addition of certain features and mechanisms.</p>
+            <ul>
+                <li>Variables</li>
+                <p class="list-p">Variables in sass allow you to save reused values under a term for ease of use. For example a background color might be saved as 'main background'</p>
+
+                <li>Nesting</li>
+                <p class="list-p">SASS nesting is very similar to HTML nesting allowing for easier DOM traversal in the style sheet.</p>
+
+                <li>Mixins</li>
+                <p class="list-p">Mixins are like variables except they hold entire groups of CSS declarations for reuse.</p>
+
+                <li>Functions</li>
+                <p class="list-p">Functions allow for more dynamic calculations to occur without the use of JS. This leads to lighter weight webpages with higher responsivness.</p>
+
+            </ul>
+        </div>
+    </main>
+    <!-- Sass Implementation -->
+    <!-- <link href="css/input.scss"> -->
+    <!-- To implement SASS I followed their documentation for syntax as well as installing sass globally via node js. I installed sass and then used their watch command with two arguments. first my scss file second my output file. This command allows for dynamic change as you are working. For code editing I used VSCode. -->
+</body>
+</html>
