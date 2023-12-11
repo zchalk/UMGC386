@@ -1,0 +1,74 @@
+/* bible */
+* {
+    margin: 0;
+    padding: 0;
+}
+html, body {
+    height: 100%;
+}
+
+/* header */
+header {
+    background-color: rgb(113, 139, 108);
+    position: sticky;
+    position: -webkit-sticky;
+    top:0;
+    width: 100%;
+    height: 5em;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-content: center;
+}
+h1 {
+    color: white;
+}
+.headNav {
+    display: flex;
+    align-items: center;
+}
+.nav {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+.nav > li {
+    text-decoration: none;
+    margin: 0 2em;
+}
+.navItem {
+    text-decoration: none;
+    color: white;
+}
+i {
+    align-self: flex-end;
+    margin: 0 2em;
+}
+
+/* footer */
+footer {
+    background-color: rgb(113, 139, 108);
+    position: absolute;
+    bottom:0;
+    width: 100%;
+    height: 3em;
+    display: flex;
+    justify-content: center;
+}
+.footNav {
+    display: flex;
+    align-items: center;
+}
+footer a {
+    color: white;
+    margin: 0 2em;
+}
+
+/* main  */
+main {
+    position: absolute;
+    top: 5em;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 3em;
+}
