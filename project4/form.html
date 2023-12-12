@@ -28,6 +28,62 @@
         </nav>
     </header>
     <main>
+        <div class="identification-form-container">
+            <h1>Plant Identification</h1>
+            <span>* indicates required fields</span>
+            <form class="identification-form">
+                <fieldset class="id-fieldset">
+                    <legend>Contact</legend>
+
+                    <div class="input-container-id">
+                        <label class="id-label" for="firstName">First Name*:</label>
+                        <input tabindex="0" type="text" name="firstName" placeholder="First Name" required>
+                    </div>
+
+                    <div class="input-container-id">
+                        <label class="id-label" for="lastName">Last Name*:</label>
+                        <input type="text" name="lastName" placeholder="Last Name" required>
+                    </div>
+
+                    <div class="input-container-id">
+                        <label class="id-label" for="email">Email*:</label>
+                        <input type="email" name="email" placeholder="Email" size="50" required>
+                    </div>
+                </fieldset>
+                <fieldset class="id-fieldset">
+                    <legend>Plant Information</legend>
+
+                    <div class="input-container-id">
+                        <label class="id-label" for="image-upload">Image Upload*:</label>
+                        <input type="file" name="image-upload" required>
+                    </div>
+
+                    <div class="input-container-id">
+                        <label class="id-label" for="comments">Additional Info:</label>
+                        <textarea  name="comments" placeholder="Comments" required></textarea>
+                    </div>
+                   
+                    <div class="input-container-id">
+                        <label class="id-label" for="outdoor">Outdoor Plant</label>
+                        <input type="checkbox" id="outdoor" name="plant-info">
+                    </div>
+
+                    <div class="input-container-id">
+                        <label class="id-label" for="indoor">Indoor Plant</label>
+                        <input type="checkbox" id="indoor" name="plant-info">
+                    </div>
+                    <div class="input-container-id">
+                        <label class="id-label" for="tropical">Tropical</label>
+                        <input type="checkbox" id="tropical" name="plant-info">
+                    </div>
+                    <div class="input-container-id">
+                        <label class="id-label" for="unknown">Unknown</label>
+                        <input type="checkbox" id="unknown" name="plant-info">
+                    </div>
+                </fieldset>
+                <input id="id-submit" type="submit" name="submit" value="Submit" onclick="window.location='confirmation/identifyconfirmation.html'">
+
+            </form>
 
     </main>
     <footer>
