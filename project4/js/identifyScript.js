@@ -1,5 +1,6 @@
 let valid = "";
 let button = document.getElementById('idButton');
+let form = document.getElementById('identification-form');
 
 function plantValidation () {
     let idFirstName = document.getElementById('idFirstName');
@@ -21,6 +22,8 @@ function plantValidation () {
 }
 function plantValidationForm (event) {
     event.preventDefault();
+    form.checkValidity();
+    form.reportValidity();
     plantValidation();
     if (valid) {
     document.location.href = "confirmation/identifyconfirmation.html";

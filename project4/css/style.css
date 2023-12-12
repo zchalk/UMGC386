@@ -39,7 +39,9 @@ header {
 .nav > a {
     text-decoration: none;
     font-size: large;
+    border-radius: 0.5em;
     margin: 0 2em;
+    transition: background-color 1s;
 }
 .navItem {
     text-decoration: none;
@@ -53,7 +55,6 @@ i {
 .nav a:hover {
     background-color: white;
     color:rgb(99, 124, 95);
-    border-radius: 0.5em;
 }
 
 /* footer */
@@ -454,7 +455,7 @@ article > h2 {
     color:rgb(99, 124, 95);
     text-align: center;
 }
-.checkout-form {
+#checkout-form {
     display: flex;
     flex-direction: column;
 }
@@ -489,11 +490,18 @@ article > h2 {
     background-color:rgb(99, 124, 95);
     color:white;
     font-size: x-large;
+    border: none;
     padding: 0.5em;
     border-radius:0.5em;
     margin-top: 0.5em;
     cursor:pointer;
+    transition: background-color 1s;
 }
+#checkoutButton:hover {
+    color:rgb(99, 124, 95);
+    background-color:white;
+}
+
 /* identify */
 .identify-container {
     display: flex;
@@ -518,9 +526,15 @@ article > h2 {
     color:white;
     font-size: x-large;
     padding: 0.5em;
+    border:none;
     border-radius:0.5em;
     margin-top: 0.5em;
     cursor:pointer;
+    transition: background-color 1s;
+}
+.identify-container > button:hover {
+    color:rgb(99, 124, 95);
+    background-color:white;
 }
 /* identify form */
 .identification-form-container {
@@ -539,7 +553,7 @@ article > h2 {
     color:rgb(99, 124, 95);
     text-align: center;
 }
-.identification-form {
+#identification-form {
     display: flex;
     flex-direction: column;
 }
@@ -580,11 +594,17 @@ article > h2 {
 #idButton {
     background-color:rgb(99, 124, 95);
     color:white;
+    border: none;
     font-size: x-large;
     padding: 0.5em;
     border-radius:0.5em;
     margin-top: 0.5em;
     cursor:pointer;
+    transition: background-color 1s;
+}
+#idButton:hover {
+    color:rgb(99, 124, 95);
+    background-color:white;
 }
 /* confirmation */
 .id-confirmation-container {
@@ -605,6 +625,11 @@ article > h2 {
     text-decoration: none;
     font-size: x-large;
     margin-top: 1em;
+    transition: background-color 1s;
+}
+.id-confirmation-container > a:hover {
+    background-color:white;
+    color:rgb(99, 124, 95);
 }
 .purchase-confirmation-container {
     display: flex;
@@ -624,4 +649,9 @@ article > h2 {
     text-decoration: none;
     font-size: x-large;
     margin-top: 1em;
+    transition: background-color 1s;
+}
+.purchase-confirmation-container > a:hover {
+    background-color:white;
+    color:rgb(99, 124, 95);
 }
