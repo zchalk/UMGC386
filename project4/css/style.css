@@ -73,9 +73,13 @@ footer {
     display: flex;
     align-items: center;
 }
-footer a {
+footer  a {
     color: white;
+    text-decoration: none;
     margin: 0 2em;
+}
+footer p {
+    color: white;
 }
 
 /* main  */

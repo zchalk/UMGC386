@@ -36,31 +36,31 @@
                     <legend>Contact</legend>
 
                     <div class="input-container-id">
-                        <label class="id-label" for="firstName">First Name*:</label>
-                        <input tabindex="0" type="text" name="firstName" placeholder="First Name" required>
+                        <label class="id-label" for="idFirstName">First Name*:</label>
+                        <input tabindex="0" type="text" name="idFirstName" id="idFirstName" placeholder="First Name" required>
                     </div>
 
                     <div class="input-container-id">
-                        <label class="id-label" for="lastName">Last Name*:</label>
-                        <input type="text" name="lastName" placeholder="Last Name" required>
+                        <label class="id-label" for="idLastName">Last Name*:</label>
+                        <input type="text" name="idLastName" id="idLastName" placeholder="Last Name" required>
                     </div>
 
                     <div class="input-container-id">
-                        <label class="id-label" for="email">Email*:</label>
-                        <input type="email" name="email" placeholder="Email" size="50" required>
+                        <label class="id-label" for="idEmail">Email*:</label>
+                        <input type="email" name="idEmail" id="idEmail" placeholder="Email" size="50" required>
                     </div>
                 </fieldset>
                 <fieldset class="id-fieldset">
                     <legend>Plant Information</legend>
 
                     <div class="input-container-id">
-                        <label class="id-label" for="image-upload">Image Upload*:</label>
-                        <input type="file" name="image-upload" required>
+                        <label class="id-label" for="imageUpload">Image Upload*:</label>
+                        <input type="file" name="imageUpload" id="imageUpload" accept="image/*" required>
                     </div>
 
                     <div class="input-container-id">
                         <label class="id-label" for="comments">Additional Info:</label>
-                        <textarea  name="comments" placeholder="Comments" required></textarea>
+                        <textarea  name="comments" placeholder="Comments"></textarea>
                     </div>
                    
                     <div class="input-container-id">
@@ -81,8 +81,7 @@
                         <input type="checkbox" id="unknown" name="plant-info">
                     </div>
                 </fieldset>
-                <input id="id-submit" type="submit" name="submit" value="Submit" onclick="window.location='confirmation/identifyconfirmation.html'">
-
+                <button id="id-submit"  onclick="plantValidationForm();">Submit</button>
             </form>
 
     </main>
@@ -90,7 +89,10 @@
         <nav class="footNav">
             <h1 class="footH1">Strange Lil' Plant ©</h1>
             <a href="privacy.html">Privacy</a>
+            <p class="date"></p>
         </nav>
     </footer>
+    <script type="text/javascript" src="identifyScript.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
