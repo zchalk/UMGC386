@@ -472,7 +472,7 @@ article > h2 {
     color:rgb(99, 124, 95);
     font-size: xx-large;
 }
-.input-container{
+.input-container {
     display: flex;
     justify-content:baseline;
     align-items:baseline;
@@ -486,7 +486,7 @@ article > h2 {
     font-size: x-large;
     margin: 1em 1em;
 }
-#checkout-submit {
+#checkoutButton {
     background-color:rgb(99, 124, 95);
     color:white;
     font-size: x-large;
@@ -575,7 +575,7 @@ article > h2 {
     font-size: x-large;
     margin: 1em 1em;
 }
-#id-submit {
+#idButton {
     background-color:rgb(99, 124, 95);
     color:white;
     font-size: x-large;

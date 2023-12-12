@@ -1,5 +1,5 @@
-
 let valid = "";
+let button = document.getElementById('idButton');
 
 function plantValidation () {
     let idFirstName = document.getElementById('idFirstName');
@@ -19,9 +19,12 @@ function plantValidation () {
         valid = true;
     }
 }
-function plantValidationForm () {
+function plantValidationForm (event) {
+    event.preventDefault();
     plantValidation();
     if (valid) {
     document.location.href = "confirmation/identifyconfirmation.html";
     }
 }
+
+button.addEventListener("click", plantValidationForm);
