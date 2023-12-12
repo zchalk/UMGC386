@@ -355,3 +355,9 @@ article > h3 {
     align-self: center;
     cursor: pointer;
 }
+/* privacy */
+.privacy-container {
+    width:33%;
+    overflow:scroll;
+    margin-bottom: 10em;
+}
